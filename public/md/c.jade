@@ -1,0 +1,14 @@
+
+h1 my name is #{obj.name}
+p this age is #{obj.age}
+
+ul
+for v in data
+    li 
+        a(href="#{v.link}") #{v.title}
+
+for v, key in public.articles._data
+    a(href="/articles/#{ key }")
+        h2= v.title
+    
+

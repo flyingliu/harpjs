@@ -1,0 +1,46 @@
+!= partial("_header", { title: "Contact me" })
+
+h1 Welcome to Harp.
+h3 This is yours to own. Enjoy.
+
+for image in public.images._contents
+    if ( image.match(/\b.(gif|png)\b/gi) )
+        img(src="images/#{ image }")
+
+
+for v, key in public.articles._data
+    a(href="/articles/#{ key }")
+        h2= v.title
+
+hr
+div #{current.path}
+
+hr
+div #{ environment }
+
+h1 Harp is in #{ environment }
+if environment == "production"
+    p See? Harp is in production mode.
+else
+    p Okay, Harp is in development mode right now.
+
+hr 
+block content
+    p ----content--- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, veritatis.
+block script
+    script(src="images/app.js")
+
+ul
+    li.one this is one
+    li.two this is two
+
+
+div
+    .one this is one
+    .two this is two
+
+hr
+for md in public.md._contents
+
+    div 
+        a(href="md/#{md}") #{md}

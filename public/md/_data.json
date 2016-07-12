@@ -1,0 +1,23 @@
+{
+    "a": {
+        "title": "index",
+        "layout": "_new"
+    },
+    "mdb": {
+        "title": "Hello Brazil.",
+        "date": "March 4, 2013"
+    },
+    "c": {
+        "title": "this is c title",
+        "data": [
+            {"title":"title A","link":"http://www.baidu.com"},
+            {"title":"title B","link":"http://www.alibaba.com"},
+            {"title":"title C","link":"http://www.taobao.com"},
+            {"title":"title D","link":"http://www.weibo.com"}
+        ],
+        "obj": {
+            "name":"flying",
+            "age":"100"
+        }
+    }
+}

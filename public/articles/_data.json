@@ -1,0 +1,23 @@
+{
+    "hello-world": {
+        "title": "Hello World.",
+        "date": "Feb 28, 2013"
+    },
+    "hello-brazil": {
+        "title": "Hello Brazil.",
+        "date": "March 4, 2013"
+    },
+    "article-one": {
+        "layout": "_an-example-layout",
+        "title": "Example Title"
+    },
+    "article-two": {
+        "layout": "_another-one",
+        "title": "Another Example Title"
+    },
+    "b": {
+        "title":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, quos!",
+        "layout": true
+    }
+
+}
