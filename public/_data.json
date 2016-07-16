@@ -17,6 +17,9 @@
      },
      "about": {
          "layout": false
+     },
+     "block": {
+         "layout": false
      }
 
  }

@@ -1,0 +1,34 @@
+extends ./_out
+
+
+block content
+    h4 -----this is content
+    p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, dolor?
+
+
+block header
+    h4 ----this is header
+
+
+block append script
+
+
+    include ./_footer.jade
+
+    include:markdown articles/b.md
+
+    - var pets = ["one","two","three"]
+    - var logs = ["dog"," Lorem ipsum dolor sit amet."," Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate cupiditate officiis blanditiis vitae consectetur tempore rerum, eum repudiandae reprehenderit minima quo debitis necessitatibus et tenetur excepturi pariatur dolore aliquam nobis?"]
+
+    mixin pets(pets)
+      ul.pets
+        - each pet in pets
+          li= pet
+                 
+
+
+
+    +pets(pets)
+    +pets(logs)
+
+
