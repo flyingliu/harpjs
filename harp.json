@@ -1,8 +1,8 @@
 {
-    "basicAuth": "flying:123456",
     "globals": {
         "title": "harp.json 中的title Acme Site",
         "name": "John Doe",
         "uri": "http://example.com"
     }
 }
+
