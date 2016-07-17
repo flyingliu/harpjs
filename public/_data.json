@@ -20,6 +20,9 @@
      },
      "block": {
          "layout": false
+     },
+     "papa": {
+        "layout": false
      }
 
  }
