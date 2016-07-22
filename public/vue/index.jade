@@ -1,0 +1,44 @@
+h1  hello word
+#app 
+
+    p {{* message  }}
+    p
+        input(v-model="message")
+
+
+    h5 render list
+    ul
+        li( v-for="todo in todos") {{ todo.text }}
+
+    h5 methods
+    p {{ message + parseInt(2 + 8)  }}
+    button(v-on:click="reverseMessage") reverseMessage
+
+
+h2 todos
+#todo
+    input(v-model="newTodo" v-on:keyup.enter="addTodo")
+    ul
+        li(v-for="todo in todos")
+            span {{ todo.text }}
+            button(v-on:click="removeTodo($index)") X
+
+
+h2 example
+#example
+    p {{ name }}!
+    p(v-if="greeting") hello
+
+
+h2 about vm
+#page
+    p {{ a }}!
+    p {{fullName}}
+
+
+
+
+
+
+
+
