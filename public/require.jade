@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        title require使用测试
+        script(src="/js/require/require.js")
+        script(src="/js/layer/layer.js")
+        script.
+            require.config({
+                paths: {
+                    foo: 'libs/foo-1.1.3'
+                }
+            });
+            requirejs(['js/require/main']);
+    body
+    

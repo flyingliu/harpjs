@@ -24,6 +24,9 @@
      "jquery": {
          "layout": false
      },
+     "require": {
+         "layout": false
+     },
      "papa": {
         "layout": false
      }
