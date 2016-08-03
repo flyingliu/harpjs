@@ -21,6 +21,9 @@
      "block": {
          "layout": false
      },
+     "jquery": {
+         "layout": false
+     },
      "papa": {
         "layout": false
      }
