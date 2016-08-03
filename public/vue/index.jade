@@ -1,4 +1,24 @@
 h1  hello word
+
+h2 about vm
+#page
+    p {{ a }}!
+    p(:class="[className,classA]") {{fullName}}
+
+
+    template(v-if="ok")
+        h3  Lorem ipsum dolor sit amet.
+        p  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    div(v-else) this is have not content
+
+
+    ul
+        li(v-for="item in items")   {{ $key }}  - {{ item.message }}
+
+    button(v-on:click="greet") greet
+
+hr
+
 #app 
 
     p {{* message  }}
@@ -30,10 +50,7 @@ h2 example
     p(v-if="greeting") hello
 
 
-h2 about vm
-#page
-    p {{ a }}!
-    p {{fullName}}
+
 
 
 

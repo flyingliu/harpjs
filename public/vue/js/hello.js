@@ -68,12 +68,33 @@ var data = {
     a: 1,
 
     firstName: 'Foo',
-    lastName: 'Bar'
+    lastName: 'Bar',
+    classObject: {
+        red: true,
+        bg: true
+    },
+    ok: false,
+    parentMessage: 'Parent',
+    items: [
+      { message: 'Foo' },
+      { message: 'Fooabc' },
+      { message: 'Bar' }
+    ]
 
 }
 var vm = new Vue({
     el: '#page',
     data: data,
+
+    // 在 `methods` 对象中定义方法
+    methods: {
+        greet: function(event) {
+            // 方法内 `this` 指向 vm
+            alert('Hello ' + this.parentMessage + '!')
+                // `event` 是原生 DOM 事件
+            alert(event.target.tagName)
+        }
+    },
     created: function() {
         // `this` 指向 vm 实例
         console.log('created a is: ' + this.a)
@@ -97,8 +118,20 @@ var vm = new Vue({
                 this.firstName = names[0]
                 this.lastName = names[names.length - 1]
             }
+        },
+        className: {
+            get: function() {
+                return "red";
+            }
+        },
+        classA: function() {
+            return "bg";
         }
     }
+})
+
+vm.items = vm.items.filter(function (item) {
+  return item.message.match(/Foo/)
 })
 
 vm.$data === data // -> true
