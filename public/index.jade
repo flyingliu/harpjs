@@ -7,7 +7,8 @@ for image in public.images._contents
     if ( image.match(/\b.(gif|png)\b/gi) )
         img(src="images/#{ image }")
 
-
+hr
+    
 for v, key in public.articles._data
     a(href="/articles/#{ key }")
         h2= v.title
