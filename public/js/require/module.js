@@ -1,14 +1,8 @@
-
-
-
-
 ;(function (root,factory) {
         var abc = factory(root);
         if (typeof define === "function" && define.amd) {
             // AMD模式
-            define('abc', function(){
-                return abc;
-            });
+            define('abc', factory);
         } else {
             // 全局模式
             root.abc = abc;
@@ -25,9 +19,6 @@
                 console.log("my name is" + this.name)
             }
         }
-
-
-
         return abc;
     })
 )

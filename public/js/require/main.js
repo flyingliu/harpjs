@@ -10,7 +10,7 @@
             ], factory);
         } else {
             // 全局模式
-            factory($);
+            factory ($, layer, abc);
         }
     }(function ($, layer, abc) {
 
