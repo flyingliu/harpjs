@@ -3,7 +3,7 @@ h1  hello word
 h2 about vm
 #page
     p {{ a }}!
-    p(:class="[className,classA]") {{fullName}}
+    p(:class="[className,classA]") 我的全名 {{fullName}}
 
 
     template(v-if="ok")
@@ -17,7 +17,27 @@ h2 about vm
 
     button(v-on:click="greet") greet
 
-hr
+    hr
+
+    h5 
+        input(type="checkbox",v-model="allChecked") 
+        | 全选 （{{checkedCount}}）
+
+    ul
+        li(v-for="item in list")
+            p
+                input(type="checkbox" v-bind:value="item.name" v-model="checked")
+            p {{item.name}}
+            p {{item.age}}
+
+
+    p {{checked}}
+
+    hr
+
+    div(id="demo" v-demo:hello.a.b="msg")
+
+    hr
 
 #app 
 
@@ -48,6 +68,8 @@ h2 example
 #example
     p {{ name }}!
     p(v-if="greeting") hello
+
+script(src="js/hello.js")
 
 
 

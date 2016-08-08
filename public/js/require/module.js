@@ -13,7 +13,7 @@
         function abc(name) {
             this.name = name;
         }
-
+        window.layer = "this is layer";
         abc.prototype = {
             say: function () {
                 console.log("my name is" + this.name)

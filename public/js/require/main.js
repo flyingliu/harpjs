@@ -15,7 +15,7 @@
     }(function ($, layer, abc) {
 
         var a = new abc("flying");
-        console.log(a);
+        console.log(a,layer);
     })
 )
 

@@ -1,0 +1,22 @@
+#example
+    my-component   
+
+hr
+#page
+    my-component  
+
+
+script(type="text/x-template" id="hello-temp")
+    ul
+        li(v-for="li in data") {{li.name}}
+
+
+div#demo
+    hello-temp(:data="grid")
+
+    hr
+
+    hello-temp(:data="ps")
+
+
+script(src="js/comp.js")

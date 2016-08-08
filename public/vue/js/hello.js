@@ -62,7 +62,32 @@ var exampleVM = new Vue({
 })
 
 
+Vue.directive('demo', {
+    bind: function() {
+        console.log('demo bound!')
+    },
+    update: function(value) {
+        this.el.innerHTML =
+            'name - ' + this.name + '<br>' +
+            'expression - ' + this.expression + '<br>' +
+            'argument - ' + this.arg + '<br>' +
+            'modifiers - ' + JSON.stringify(this.modifiers) + '<br>' +
+            'value - ' + value
+    }
+})
 
+
+
+var _list = [{
+    name: "小明",
+    age: 23
+}, {
+    name: "小红",
+    age: 20
+}, {
+    name: "Sigma",
+    age: 28
+}];
 
 var data = {
     a: 1,
@@ -79,9 +104,13 @@ var data = {
       { message: 'Foo' },
       { message: 'Fooabc' },
       { message: 'Bar' }
-    ]
+    ],
+    list: _list,
+    checked: []
 
 }
+
+
 var vm = new Vue({
     el: '#page',
     data: data,
@@ -124,6 +153,28 @@ var vm = new Vue({
                 return "red";
             }
         },
+
+        allChecked: {
+            get: function() {
+                return this.checkedCount == this.list.length;
+            },
+            set: function(value) {
+                if (value) {
+                    this.checked = this.list.map(function(item) {
+                        return item.name
+                    })
+                } else {
+                    this.checked = []
+                }
+            }
+        },
+        checkedCount: {
+            get: function() {
+                return this.checked.length;
+            }
+        },
+
+
         classA: function() {
             return "bg";
         }
