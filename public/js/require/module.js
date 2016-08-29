@@ -11,12 +11,22 @@
     }(this, function(root) {
         'use strict';
         function abc(name) {
+
             this.name = name;
+
+            console.log(this + "is this");
+            this.init();
         }
+
+        window.yp = "yp"
+
 
         abc.prototype = {
             say: function () {
                 console.log("my name is" + this.name)
+            },
+            init:function () {
+                console.log("init");
             }
         }
         return abc;

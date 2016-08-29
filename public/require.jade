@@ -11,13 +11,16 @@ html(lang="en")
                 paths: {
                     jquery: '//cdn.bootcss.com/jquery/1.12.4/jquery',
                     layer: 'js/layer/layer',
-                    abc: 'js/require/module'
+                    abc: 'js/require/module',
+                    str:'js/require/str'
                 },
                 shim:{
                     'layer':['jquery']
                 }
 
             });
-            requirejs(['js/require/main']);
+            require(['js/require/main'],function(){
+                console.log("yp")
+            });
     body
         h1 require使用测试

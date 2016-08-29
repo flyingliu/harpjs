@@ -6,7 +6,8 @@
             define([
                 'jquery',
                 'layer',
-                'abc'
+                'abc',
+                'str'
             ], factory);
         } else {
             // 全局模式
@@ -16,6 +17,7 @@
 
         var a = new abc("flying");
         console.log(a);
+        console.log(str);
     })
 )
 
