@@ -1,0 +1,111 @@
+/*!
+
+@function calculate-width ($col-span) {
+    @return 100% / $col-span
+}
+
+.span-two {
+    width: calculate-width(2); // spans 2 columns, width = 50%
+}
+
+ */
+
+// ========================== 
+
+$i: 6;
+@while $i > 0 {
+    .item-#{$i} { width: 2em * $i; }
+    $i: $i - 2;
+}
+
+
+
+/* 
+   变量名和jade 相同。 ＃{变量} 
+*/
+
+@each $v in a, b, c, d {
+    .#{$v} { background-image:url(#{$v}.png);}
+}
+
+
+@for $i from 1 to 10 {
+    .border-#{$i} { border: #{$i}px solid blue; }
+}
+
+// ========================== 
+
+@function lightness($color) {
+    @return  $color;
+}
+
+$color:20%;
+
+@if lightness($color) > 30% {
+
+    background-color: #000;
+
+} @else {
+    background-color: #fff;
+
+}
+
+/*
+ 除法运算要加括号
+ */
+
+h1 { width: (10px / 2); height:10px * 2; }
+h2 { width: 20px + 5; height:10px - 5; }
+
+
+
+@function calculate-width ($col-span) {
+    @return 100% / $col-span
+}
+
+.span-two {
+    width: calculate-width(2); // spans 2 columns, width = 50%
+}
+
+.span-three {
+    width: calculate-width(3); // spans 3 columns, width = 33.3%
+}
+
+
+
+
+/*!
+ 
+ 颜色函数
+ */
+
+.lighten { color:lighten(#000,50%);}
+.darken { color:darken(#fff, 50%);}
+.grayscale { color:grayscale(blue);}// 灰度级
+.complement { color:complement(red);}// 互补色
+
+/* PLACEHOLDER 
+============================================= */
+
+%btn {
+    padding: 10px;
+    display: block;
+}
+
+/*! BUTTON MIXIN 
+============================================= */
+
+@mixin  btn-background($btn-background) {
+    @extend %btn;
+    background-color: $btn-background;
+    &:hover {
+        background-color: lighten($btn-background,10%);
+    }
+}
+
+/*! BUTTONS
+============================================= */
+
+.cta-btn {
+    @include btn-background(green);
+}

@@ -16,8 +16,12 @@
     }(function ($, layer, abc) {
 
         var a = new abc("flying");
+<<<<<<< HEAD
         console.log(a);
         console.log(str);
+=======
+        console.log(a,layer);
+>>>>>>> 9bc491ac4f1d14d607a8699824faccff74f90ad5
     })
 )
 
