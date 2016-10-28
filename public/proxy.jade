@@ -1,0 +1,19 @@
+doctype
+html
+  head
+    meta(http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1")
+    link(rel="stylesheet" href="/main.css")
+    link(rel="shortcut icon" href="favicon.ico")
+
+    title this is layout title
+    script(src="//cdn.bootcss.com/jquery/1.12.4/jquery.js")
+    script(src="js/proxy.js")
+  body
+    #abc  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, repellat.
+    script.
+        $("#abc").click(function(){
+            proxy.geta({type:"get"},function(data){
+                console.log(data);
+
+            })
+        });
