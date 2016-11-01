@@ -1,7 +1,6 @@
-var a = [];
-for (let i = 0; i < 10; i++) {
-  a[i] = function () {
-    console.log(i);
-  };
+function log(x, y = 'World') {
+  console.log(x, y);
 }
-a[6](); // 6
+log()
+
+var f = v => v;

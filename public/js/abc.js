@@ -1,14 +1,12 @@
-"use strict";
+'use strict';
 
-var a = [];
+function log(x) {
+  var y = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'World';
 
-var _loop = function _loop(i) {
-  a[i] = function () {
-    console.log(i);
-  };
-};
-
-for (var i = 0; i < 10; i++) {
-  _loop(i);
+  console.log(x, y);
 }
-a[6](); // 6
+log();
+
+var f = function f(v) {
+  return v;
+};

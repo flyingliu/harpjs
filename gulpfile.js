@@ -6,11 +6,11 @@ var gulp = require('gulp'),
     babel = require('gulp-babel'),
     plumber = require('gulp-plumber');
 
-
 /* es6 */
 gulp.task('es6', function() {
-   return gulp.src('**/*.es6')
-        .pipe(babel({
+    return gulp.src('**/*.es6')
+    .pipe(plumber())
+    .pipe(babel({
             presets: ['es2015']
         }))
         .pipe(gulp.dest('./'));
@@ -21,4 +21,4 @@ gulp.task('watch', function() {
     gulp.watch(['**/*.es6'], ['es6']);
 });
 
-gulp.task('default', ['es6','watch']);
+gulp.task('default', ['es6', 'watch']);
