@@ -18,6 +18,9 @@
      "about": {
          "layout": false
      },
+     "iframe": {
+         "layout": false
+     },
      "block": {
          "layout": false
      },
