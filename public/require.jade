@@ -9,6 +9,23 @@ html(lang="en")
         //- script(src="/js/layer/layer.js")
         script(src="js/require/main.js")
         script.
+<<<<<<< HEAD
+            require.config({
+                paths: {
+                    jquery: '//cdn.bootcss.com/jquery/1.12.4/jquery',
+                    layer: 'js/layer/layer',
+                    abc: 'js/require/module',
+                    str:'js/require/str'
+                },
+                shim:{
+                    'layer':['jquery']
+                }
+
+            });
+            require(['js/require/main'],function(){
+                console.log("yp")
+            });
+=======
             //- require.config({
             //-     paths: {
             //-         jquery: '//cdn.bootcss.com/jquery/1.12.4/jquery',
@@ -21,5 +38,6 @@ html(lang="en")
 
             //- });
             //- requirejs(['js/require/main']);
+>>>>>>> 9bc491ac4f1d14d607a8699824faccff74f90ad5
     body
         h1 require使用测试
