@@ -1,0 +1,21 @@
+* {
+    padding: 0;
+    margin: 0;
+    font: 30px/1.8 arial;
+}
+
+body {
+    padding: 20px;
+}
+
+dl {
+    dd {
+        height: 1200px;
+        h1 {
+            background: rgba(0, 0, 0, .1);
+        }
+        p {
+            background: rgba(255, 0, 0, .1);
+        }
+    }
+}

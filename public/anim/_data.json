@@ -6,6 +6,9 @@
     "index": {
         "title": "index",
         "layout": false
+    },
+    "anim": {
+        "title": "anim",
+        "layout": false
     }
-
 }
