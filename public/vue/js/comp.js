@@ -14,6 +14,34 @@ Vue.component('hello-temp', {
   }
 })
 
+
+// 定义
+var MyComponent = Vue.extend({
+
+    template: '<span>wewe{{parentMsg}}</span>',
+    data: function() {
+        return {
+            parentMsg: 'Message from parent'
+        }
+    }
+})
+
+Vue.component('mytemp', MyComponent)
+
+// new Vue({
+//     el: '#demo-2',
+//     data: {
+//         parentMsg: 'Message from parent'
+//     },
+//     components: {
+//         child: {
+//             props: ['myMessage'],
+//             template: '<span>{{myMessage}}</span>'
+//         }
+//     }
+// })
+
+
 // 创建根实例
 new Vue({
     el: '#demo',
@@ -39,38 +67,18 @@ new Vue({
         ]
     }
 })
-// 局部注册也可以这么做
-// var Parent = Vue.extend({
-//   components: {
-//     'my-component': {
-//       template: '<div>A custom component!</div>'
-//     }
-//   }
-// })
-// 
-// var Child = Vue.extend({ /* ... */ })
 
-// var Parent = Vue.extend({
-//   template: '...',
-//   components: {
-//     // <my-component> 只能用在父组件模板内
-//     'my-component': Child
-//   }
-// })
+(function(fn){
+    if(typeof define === "function" && define.amd){
+        require(["//cdn.bootcss.com/vue/1.0.26/vue.js"],fn)
+    } else {
+        fn(Vue) 
+    }
 
-
-// var data = { a: 1 }
-// var MyComponent = Vue.extend({
-//     data: data
-// })
-
-
-// Vue.component('my-component', MyComponent)
+}(function(Vue){
+    console.log(Vue);
+}))
 
 
 
-// // 创建根实例
-// new Vue({
-//   el: '#page'
-// })
 

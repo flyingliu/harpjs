@@ -18,5 +18,12 @@ div#demo
 
     hello-temp(:data="ps")
 
+    hr
+    input(v-model="parentMsg")
+    mytemp(v-bind:my-message="parentMsg")
 
+    hr
+
+
+script(src="/js/require/require.js")
 script(src="js/comp.js")
